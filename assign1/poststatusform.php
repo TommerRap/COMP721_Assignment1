@@ -10,7 +10,7 @@ $today = date("d/m/Y");
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Posting Status</title>
     <link rel="stylesheet" href="styles.css">
-    
+
 </head>
 
 <body>
@@ -53,15 +53,15 @@ $today = date("d/m/Y");
                 <div class="input">
                     <label for="permission">Permission:</label>
                     <div class="custom-checkbox">
-                        <input type="checkbox" name="permission[]" value="allowLike" id="likeInput">
+                        <input type="checkbox" name="permission[]" value="Allow Like" id="likeInput">
                         <span class="checkmark" id="likeCheck"></span>
                         <p>Like</p>
 
-                        <input type="checkbox" name="permission[]" value="allowComment" id="commentInput">
+                        <input type="checkbox" name="permission[]" value="Allow Comment" id="commentInput">
                         <span class="checkmark" id="commentCheck"></span>
                         <p>Comment</p>
 
-                        <input type="checkbox" name="permission[]" value="allowShare" id="shareInput">
+                        <input type="checkbox" name="permission[]" value="Allow Share" id="shareInput">
                         <span class="checkmark" id="shareCheck"></span>
                         <p>Share</p>
                     </div>
@@ -96,7 +96,7 @@ $today = date("d/m/Y");
 
 
 
-    //REGEX
+    //REGEX !! This is AI generated.
     const stCodeRegex = /^S\d{4}$/;
 
     //LIseten for input event(stCode)
@@ -121,7 +121,7 @@ $today = date("d/m/Y");
         }
     });
 
-    //Radio prettier functions, replace vanila checkbox
+    //Radio prettier functions, replace vanila checkbox. Some of the code is duplicated from the radio and is AI generated.
     uniCheck.addEventListener('click', () => {
         uniInput.checked = true;
         uniInput.dispatchEvent(new Event('change'));
@@ -162,17 +162,17 @@ $today = date("d/m/Y");
 
             if (checkEl && inputEl) {
                 checkEl.addEventListener('click', () => {
-                    inputEl.checked = !inputEl.checked; // checkbox切换
+                    inputEl.checked = !inputEl.checked; // Switch checkbox state
                     inputEl.dispatchEvent(new Event('change'));
                 });
             } else {
-                console.error(`找不到元素: ${check} 或 ${input}`);
+                console.error(`Cannot find: ${check} or ${input}`);
             }
         });
     });
 </script>
 <script>
-document.querySelector('form').addEventListener('submit', function(e) {
-    console.log("Form submitting naturally...");
-});
+    document.querySelector('form').addEventListener('submit', function(e) {
+        console.log("Form submitting naturally...");
+    });
 </script>

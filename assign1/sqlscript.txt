@@ -1,0 +1,13 @@
+Creating Table:
+ CREATE TABLE status (
+        StatusCode VARCHAR(5) PRIMARY KEY,
+        Status VARCHAR(255) NOT NULL,
+        Share VARCHAR(20) NOT NULL,
+        DatePosted DATE NOT NULL,
+        Permission VARCHAR(255))
+
+Post Status: 
+INSERT INTO status (StatusCode, Status, Share, DatePosted, Permission) VALUES ('$stcodeEscaped', '$statusEscaped', '$share', '$dateFormatted', '$permissionEscaped')
+
+Search Status:
+SELECT * FROM status WHERE Status LIKE '%$searchEscaped%' OR StatusCode = '$searchEscaped'

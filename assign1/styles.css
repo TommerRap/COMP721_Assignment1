@@ -1,0 +1,250 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Helvetica Neue', sans-serif;
+}
+
+body {
+  height: 100vh;
+  background: linear-gradient(135deg, #2c3e50 0%, #4ca1af 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  color: white;
+}
+
+body {
+  background-color: black;
+  font-family: Arial, sans-serif;
+
+  font-size: large;
+}
+
+/* General Background for middle blocks */
+.container {
+  width: 60vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3vh 0;
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+}
+
+.container:hover {
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+.container>.flex-item {
+  width: 100%;
+  display: flex;
+  margin-top: 0.5rem;
+  padding: 0 2rem;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Layout for all operation buttons at btm of container */
+.ops {
+  display: flex;
+  flex-direction: row;
+}
+
+.ops>.btn {
+  /* Text */
+  color: white;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 2vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1vh 1vw;
+  text-align: center;
+  margin: 1rem 2rem;
+  max-width: 20vw;
+  height: 6vh;
+  background: linear-gradient(135deg, #545c65 0%, #2c3737 100%);
+  background-size: 200% 200%;
+  background-position: 0% 50%;
+  transition: background-position 0.5s ease;
+  text-decoration: none;
+}
+
+.ops>.btn:hover {
+  background-position: 100% 50%;
+}
+
+/* Form inputs */
+.container>form {
+  margin-top: 2vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+form>.section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 1vh 1vw;
+
+}
+
+.section>.input {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.section>label {
+  color: white;
+  font-size: 20px;
+  margin-right: 1vw;
+}
+
+form>.section>.input>input {
+  padding: 0.5vh 2vw;
+  border: none;
+  border-radius: 50px;
+  font-size: 18px;
+  outline: none;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+
+}
+
+
+form>.section>.input>input:focus {
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.2);
+}
+
+form>.section>.input>input::placeholder {
+  color: white;
+  opacity: 0.7;
+}
+
+.success {
+  color: green !important;
+  font-size: 20px;
+}
+
+.warning {
+  color: red !important;
+  font-size: 20px;
+}
+
+.description {
+  margin: 0;
+  align-self: flex-start;
+  color: white;
+  font-size: 20px;
+  text-align: left;
+  font-size: small;
+}
+
+.custom-radio {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin-bottom: 10px;
+  font-size: 16px;
+  user-select: none;
+}
+
+.custom-radio input[type="radio"] {
+  margin-left: 1vw;
+
+  display: none;
+}
+
+.custom-radio .checkmark {
+  width: 20px;
+  height: 20px;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin-left: 1vw;
+  margin-right: 0.5vw;
+  display: inline-block;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.custom-radio .checkmark:hover {
+  background-color: rgba(255, 255, 255, 0.349);
+}
+
+.custom-radio input[type="radio"]:checked+.checkmark {
+  background-color: #81df9d;
+}
+
+/* Custom-checkbox */
+/* !! This few classes are AI generated based on Custom-radio */
+.custom-checkbox {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+
+.custom-checkbox input[type="checkbox"] {
+  display: none;
+}
+
+
+.custom-checkbox .checkmark {
+  margin-left: 1vw;
+  margin-right: 0.5vw;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  position: relative;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+
+.custom-checkbox p {
+  font-size: 16px;
+  color: white;
+}
+
+
+.custom-checkbox input[type="checkbox"]:checked+.checkmark {
+  background-color: #81df9d;
+}
+
+
+.custom-checkbox .checkmark:hover {
+  background-color: rgba(255, 255, 255, 0.349);
+}
+
+.permBox {
+  display: inline-flexbox;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2vh;
+  background-color: darkgreen;
+  padding: 0.5vh 0.6vw;
+  border-radius: 50px;
+  font-size: small;
+}
+
+.mb-2 {
+  margin-bottom: 2vh;
+}
