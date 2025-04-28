@@ -1,0 +1,233 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Helvetica Neue', sans-serif;
+}
+
+body {
+    height: 100vh;
+    background: linear-gradient(135deg, #2c3e50 0%, #4ca1af 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    color: white;
+}
+
+body {
+    background-color: black;
+    font-family: Arial, sans-serif;
+
+    font-size: large;
+}
+
+.container {
+    /* Functional & liocation effect */
+    width: 60vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 3vh 0;
+    /* Vision Effect Blur & Transparent */
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
+}
+
+.container:hover {
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+    /* Increase shadow on hover */
+}
+
+.container>.flex-item {
+    width: 100%;
+    display: flex;
+    margin-top: 0.5rem;
+    padding: 0 2rem;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.ops {
+    display: flex;
+    flex-direction: row;
+}
+
+.ops>.btn {
+    /* Text */
+    color: white;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 2vw;
+    display: flex;
+    /* 修改这里，设置为 flex 布局 */
+    align-items: center;
+    /* 垂直居中 */
+    justify-content: center;
+    /* 水平居中 */
+    padding: 1vh 1vw;
+    text-align: center;
+    margin: 1rem 2rem;
+    max-width: 20vw;
+    height: 6vh;
+    background: linear-gradient(135deg, #545c65 0%, #2c3737 100%);
+    background-size: 200% 200%;
+    background-position: 0% 50%;
+    transition: background-position 0.5s ease;
+    text-decoration: none;
+}
+
+.ops>.btn:hover {
+    background-position: 100% 50%;
+}
+
+.container>form {
+    margin-top: 2vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+form>.section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 1vh 1vw;
+
+}
+
+.section>.input {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.section>label {
+    color: white;
+    font-size: 20px;
+    margin-right: 1vw;
+}
+
+form>.section>.input > input {
+    padding: 0.5vh 2vw;
+    border: none;
+    border-radius: 50px;
+    font-size: 18px;
+    outline: none;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+
+}
+
+
+form>.section>.input > input:focus {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+    background: rgba(255, 255, 255, 0.2);
+}
+
+
+.success {
+    color: green !important;
+    font-size: 20px;
+}
+
+.warning {
+    color: red !important;
+    font-size: 20px;
+}
+
+.description {
+    margin: 0;
+    align-self: flex-start;
+    color: white;
+    font-size: 20px;
+    text-align: left;
+    font-size: small;
+}
+.custom-radio {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-bottom: 10px;
+    font-size: 16px;
+    user-select: none;
+  }
+  
+  .custom-radio input[type="radio"] {
+    margin-left: 1vw;
+
+    display: none;
+  }
+  
+  /* 自定义小方块 */
+  .custom-radio .checkmark {
+    width: 20px;
+    height: 20px;
+    background-color: rgba(255, 255, 255, 0.2); /* 半透明灰色 */
+    margin-left: 1vw;
+    margin-right: 0.5vw;
+    display: inline-block;
+    border-radius: 4px; /* 小圆角，不是圆 */
+    transition: background-color 0.3s;
+  }
+  .custom-radio .checkmark:hover {
+    background-color: rgba(255, 255, 255, 0.349);
+  }
+  
+  /* 如果选中，改变颜色 */
+  .custom-radio input[type="radio"]:checked + .checkmark {
+    background-color: #81df9d; /* 选中变成深灰色 */
+  }
+
+  /* 基础设置 */
+.custom-checkbox {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  
+  /* 让 input 隐藏但还能选中 */
+  .custom-checkbox input[type="checkbox"] {
+    display: none;
+  }
+  
+  /* 小方块 */
+  .custom-checkbox .checkmark {
+    margin-left: 1vw;
+    margin-right: 0.5vw;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color:rgba(255, 255, 255, 0.2); /* 半透明灰 */
+    border-radius: 4px; /* 方角 */
+    position: relative;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* 对应文字 */
+  .custom-checkbox p {
+    font-size: 16px;
+    color: white;
+  }
+  
+  /* 选中时变深色 */
+  .custom-checkbox input[type="checkbox"]:checked + .checkmark {
+    background-color: #81df9d; /* 深灰色 */
+  }
+  
+  /* hover时轻微变化 */
+  .custom-checkbox .checkmark:hover {
+    background-color: rgba(255, 255, 255, 0.349);
+  }
+  
